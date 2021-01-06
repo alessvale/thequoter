@@ -1,0 +1,103 @@
+body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+}
+
+#container {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  background-color: white;
+}
+
+#title {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+}
+
+#quote {
+  width: 50%;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 30px;
+}
+
+#textbox{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  resize: none;
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem;
+  width: 50%;
+  border-radius: 10px;
+  box-shadow: 0 0 0 3px #a9c4f5;
+  border: 10px solid transparent;
+}
+
+#button {
+  font-family: 'Playfair Display', serif;
+  background-color: #a9c4f5;
+  border: none;
+  font-size: 20px;
+  border-radius: 2px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  outline: none;
+  width: 100px;
+  height:50px;
+}
+
+
+
+ @media only screen and (max-width: 992px) {
+   body {
+     font-size: 30px;
+   }
+   #title {
+   }
+
+   #button {
+     font-size: 30px;
+     width: 200px;
+     height:100px;
+   }
+   #textbox {
+     font-size: 30px;
+   }
+   #textbox::-webkit-input-placeholder {
+    font-size: 30px;
+  }
+  #quote {
+    font-size: 48px;
+  }
+
+}
+
+@media only screen and (max-width: 736px) {
+  body {
+    font-size: 35px;
+  }
+  #title {
+    font-size: 48px;
+  }
+
+  #button {
+    font-size: 30px;
+    width: 200px;
+    height:100px;
+  }
+  #textbox {
+    font-size: 36px;
+  }
+ #quote {
+   font-size: 50px;
+ }
+
+}
