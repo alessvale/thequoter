@@ -1,5 +1,4 @@
-# thequoter
-The Quoter App
+# The Quoter App
 
 An NLP Flask app deployed with Docker on Heroku 
 
