@@ -41,6 +41,10 @@ body {
   border: 10px solid transparent;
 }
 
+#textbox:focus{
+  outline: none;
+}
+
 #button {
   font-family: 'Playfair Display', serif;
   background-color: #a9c4f5;
