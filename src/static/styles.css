@@ -28,6 +28,15 @@ body {
   font-size: 30px;
 }
 
+#author {
+  width: 50%;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+}
+
 #textbox{
   display: block;
   margin-left: auto;
@@ -80,6 +89,10 @@ body {
   }
   #quote {
     font-size: 48px;
+  }
+
+  #author {
+    font-size: 38px;
   }
 
 }

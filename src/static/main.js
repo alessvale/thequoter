@@ -13,13 +13,16 @@ button.onclick = function(){
       success: function(result, status){
         console.log(result);
         let p = document.getElementById('quote');
-        if (result[0].quote == ""){
+        let p2 = document.getElementById('author');
+        if (result[0].quote[0] == ""){
           p.innerHTML = "...";
+          p2.innerHTML = "";
         }
         else {
-          p.innerHTML = "`" + result[0].quote + "'";
+          p.innerHTML = "`" + result[0].quote[0] + "'";
+          p2.innerHTML = result[0].quote[1]
         }
-        console.log(result[0].quote);
+        console.log(result[0].quote[0]);
       },
       error: function(err){
         console.log(err);

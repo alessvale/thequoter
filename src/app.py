@@ -9,10 +9,12 @@ import numpy as np
 # with open("raw.txt", "r") as f:
 #     text = f.readlines()
 # quotes = []
+# authors = []
 # for q in text:
 #     parts = q.split("â€")
 #     if len(parts) == 2:
 #         quotes.append(parts[0].strip())
+#         authors.append(parts[1].strip("” "))
 #
 # quotes_clean = []
 # for q in quotes:
@@ -25,6 +27,9 @@ import numpy as np
 # with open("corpus.txt", "w") as f:
 #     for p in quotes_clean:
 #         f.writelines(p + "\n")
+# with open("authors.txt", "w") as f:
+#     for p in authors:
+#         f.writelines(p)
 ####
 def similCompute(X, y):
     simil = []
@@ -38,6 +43,8 @@ def similCompute(X, y):
 
 with open("corpus.txt", "r") as f:
         corpus = [s.strip() for s in f.readlines()]
+with open("authors.txt", "r") as f:
+        authors= [s.strip() for s in f.readlines()]
 
 vectorizer = TfidfVectorizer()
 X = vectorizer.fit_transform(corpus).todense()
@@ -55,9 +62,11 @@ def parse_text():
         y = vectorizer.transform([text]).todense()
         idx = similCompute(X, y)
         quote = corpus[idx]
+        auth = authors[idx]
     else:
         quote = ""
-    obj = [{"quote": quote}]
+        auth = ""
+    obj = [{"quote": [quote, auth]}]
     return jsonify(obj)
 
 port = int(os.environ.get('PORT', 5000))
