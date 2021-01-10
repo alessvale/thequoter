@@ -3,6 +3,7 @@ from flask import Flask, render_template, jsonify, request
 import os
 from sklearn.feature_extraction.text import TfidfVectorizer
 import numpy as np
+from waitress import serve
 
 ####Quote generation
 ###Obtained from https://silgro.com/fortunes.htm#section_p
@@ -71,5 +72,6 @@ def parse_text():
 
 port = int(os.environ.get('PORT', 5000))
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', port = port)
+    #app.run(host='0.0.0.0', port = port)
     #app.run(debug = True)
+    serve(app, host='0.0.0.0', port = port)
